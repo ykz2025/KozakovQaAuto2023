@@ -3,7 +3,7 @@ import pytest
 
 class User:
 
-    def __init__(self) -> None:
+    def __init__(self):
         self.name = None
         self.second_name = None
 
@@ -24,11 +24,3 @@ def user():
     yield user
 
     user.remove()
-
-
-def test_change_name(user):
-    assert user.name == 'Sergii'
-
-
-def test_change_second_name(user):
-    assert user.second_name == 'Butenko'

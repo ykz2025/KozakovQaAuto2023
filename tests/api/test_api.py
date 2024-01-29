@@ -8,7 +8,7 @@ def test_remove_name(user):
 
 
 @pytest.mark.check
-def test_mame(user):
+def test_name(user):
     assert user.name == "Sergii"
 
 
