@@ -1,5 +1,5 @@
 from modules.ui.page_objects.base_page import BasePage
-from selenium.webdriver.common.by import by
+from selenium.webdriver.common.by import By
 
 
 class SignInPage(BasePage):
@@ -15,7 +15,7 @@ class SignInPage(BasePage):
         # Знаходимо поле, в яке будемо вводити неправильне ім'я користувача або поштову адресу
         login_elem = self.driver.find_element(By.ID, "login_field")
 
-        # Вводимо неправильне ім'я користувача або поштову адресу
+        # Вводимо неправильне ім'я користувача або поштову адрІесу
         login_elem.send_keys(username)
 
         # Знаходимо поле, в яке будемо вводити неправильний пароль

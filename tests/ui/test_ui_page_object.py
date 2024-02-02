@@ -1,4 +1,4 @@
-from modules.ui.page_objects.base_page import SignInPage
+from modules.ui.page_objects.sign_in_page import SignInPage
 import pytest
 
 
@@ -14,7 +14,7 @@ def test_check_incorrect_username():
     sign_in_page.try_login("page_object@gmail.com", "wrong password")
 
     # Перевіряємо, що назва сторінки така, яку ми очікуємо
-    assert sign_in_page.check_title("Sign in to GitHub - GitHub")
+    assert sign_in_page.check_title("Sign in to GitHub · GitHub")
 
     # Закриваємо браузер
     sign_in_page.close()

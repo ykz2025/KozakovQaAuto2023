@@ -2,8 +2,8 @@ import pytest
 
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
-import time
 
 @pytest.mark.ui
 def test_check_incorrect_username():
@@ -32,7 +32,7 @@ def test_check_incorrect_username():
     btn_elem.click()
 
     # Перевіряємо, що назва сторінки така, яку ми очікуємо
-    assert driver.title == "Sign in to GitHub - GitHub"
+    assert driver.title == "Sign in to GitHub · GitHub"
 
     # Закриваємо браузер
     driver.close()
